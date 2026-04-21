@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muhammad Ilyas — Digital Designer & GreenTech Visual Strategist</title>
-  <meta name="description" content="Portfolio of Muhammad Ilyas — Digital Designer, GreenTech Visual Strategist, and Data Visualisation Specialist based in Chiang Mai, Thailand." />
+  <title>Muhammad Ilyas — Digital Designer &amp; GreenTech Visual Strategist</title>
+  <meta name="description"
+    content="Portfolio of Muhammad Ilyas — Digital Designer, GreenTech Visual Strategist, and Data Visualisation Specialist based in Chiang Mai, Thailand." />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Muhammad Ilyas — Digital Designer &amp; GreenTech Visual Strategist" />
+  <meta property="og:description"
+    content="Making energy transition data impossible to ignore. Portfolio of Muhammad Ilyas — Digital Designer based in Chiang Mai, Thailand." />
+  <meta property="og:url" content="https://milyas009.github.io/portfolio/" />
+  <meta property="og:image" content="assets/images/profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Muhammad Ilyas — Digital Designer &amp; GreenTech Visual Strategist" />
+  <meta name="twitter:description"
+    content="Portfolio of Muhammad Ilyas — Digital Designer, GreenTech Visual Strategist, and Data Visualisation Specialist." />
+  <meta name="theme-color" content="#10b981" />
+  <link rel="canonical" href="https://milyas009.github.io/portfolio/" />
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%2310b981'/><text x='50%25' y='62%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='52' fill='white'>MI</text></svg>" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
   <!-- ===== NAV ===== -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">MI<span class="dot">.</span></a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Work</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="#publications">Research</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -36,20 +68,38 @@
       <div class="orb orb-2"></div>
       <canvas id="particleCanvas"></canvas>
     </div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Digital Designer &amp; GreenTech Visual Strategist</p>
-      <h1 class="hero-name">Muhammad<br /><span class="accent">Ilyas</span></h1>
-      <p class="hero-sub">Translating complex climate &amp; energy data into<br />compelling visual narratives — without greenwashing.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <div class="availability-badge">
+          <span class="avail-dot"></span>
+          Available for remote &amp; on-site roles
+        </div>
+        <p class="hero-role-badge">Digital Designer &amp; GreenTech Visual Strategist</p>
+        <h1 class="hero-name">Muhammad<br /><span class="accent">Ilyas</span></h1>
+        <p class="hero-sub">Making energy transition data <strong>impossible to ignore</strong> — where rigorous science
+          meets compelling visual storytelling.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Discover My Work</a>
+          <a href="assets/Muhammad_Ilyas_CV.pdf" download class="btn btn-ghost">↓ Download CV</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">Figma</span>
+          <span class="badge">Adobe CC</span>
+          <span class="badge">GreenTech</span>
+          <span class="badge">PyPSA-Earth</span>
+          <span class="badge">Chiang Mai, Thailand</span>
+        </div>
       </div>
-      <div class="hero-badges">
-        <span class="badge">Figma</span>
-        <span class="badge">Adobe CC</span>
-        <span class="badge">GreenTech</span>
-        <span class="badge">PyPSA-Earth</span>
-        <span class="badge">Chiang Mai, Thailand</span>
+      <div class="hero-image-col">
+        <div class="hero-profile-wrap">
+          <div class="hero-profile-ring"></div>
+          <img src="assets/images/profile.jpg" alt="Muhammad Ilyas — Digital Designer" class="hero-profile-img" />
+          <div class="hero-profile-badge">
+            <span>PhD Researcher</span>
+            <span class="hpb-sep">·</span>
+            <span>5+ yrs Design</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="hero-scroll-hint">
@@ -65,8 +115,12 @@
         <div class="about-text">
           <p class="section-label">About Me</p>
           <h2>Design that drives<br /><span class="accent">environmental impact</span></h2>
-          <p class="about-body">I am a versatile digital designer currently pursuing a <strong>PhD in Electrical Engineering</strong> at Chiang Mai University, focused on Thailand's power system decarbonization. I bridge the gap between complex GreenTech science and compelling visual storytelling.</p>
-          <p class="about-body">With hands-on experience in brand identity, web design, scientific data visualisation, and high-impact presentation design — I bring a rare combination of technical depth and creative precision appreciated by mission-driven organizations.</p>
+          <p class="about-body">I am a versatile digital designer currently pursuing a <strong>PhD in Digital
+              Innovations</strong> at Chiang Mai University, focused on Thailand's power system decarbonization. I
+            bridge the gap between complex GreenTech science and compelling visual storytelling.</p>
+          <p class="about-body">With hands-on experience in brand identity, web design, scientific data visualisation,
+            and high-impact presentation design — I bring a rare combination of technical depth and creative precision
+            appreciated by mission-driven organizations.</p>
           <div class="about-stats">
             <div class="stat">
               <span class="stat-num">5+</span>
@@ -82,13 +136,28 @@
             </div>
           </div>
           <div class="about-links">
-            <a href="https://www.linkedin.com/in/milyas0009/" target="_blank" rel="noopener" class="social-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <a href="https://www.linkedin.com/in/milyas0009/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
               LinkedIn
             </a>
-            <a href="https://github.com/milyas009" target="_blank" rel="noopener" class="social-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <a href="https://github.com/milyas009" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
               GitHub
+            </a>
+            <a href="assets/Muhammad_Ilyas_CV.pdf" download class="social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download CV
             </a>
           </div>
         </div>
@@ -120,9 +189,15 @@
               <span class="tag">UI/UX</span><span class="tag">Web Design</span><span class="tag">Brand Identity</span>
             </div>
             <h3>CMUBA — Blockchain Association Website</h3>
-            <p>Co-founded CMUBA and led the complete design of <strong>cmuba.org</strong> — from UI/UX architecture to brand guidelines ensuring visual consistency in typography, color, and voice across all digital touchpoints.</p>
+            <p>Co-founded CMUBA and led the complete design of <strong>cmuba.org</strong> — from UI/UX architecture to
+              brand guidelines ensuring visual consistency in typography, color, and voice across all digital
+              touchpoints.</p>
             <div class="project-meta">
               <span>Tools: Figma · Notion CMS · WordPress</span>
+            </div>
+            <div class="project-ctas">
+              <a href="https://cmuba.org" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">View Live Site
+                ↗</a>
             </div>
           </div>
         </article>
@@ -136,25 +211,37 @@
               <span class="tag">Brand Identity</span><span class="tag">Social Media</span>
             </div>
             <h3>Hawell's Lighting — Brand Identity</h3>
-            <p>Served as guardian of brand identity — created the logo, visual language, and brand guidelines. Delivered 50+ digital assets for social media campaigns using Adobe Creative Suite and Figma.</p>
+            <p>Served as guardian of brand identity — created the logo, visual language, and brand guidelines. Delivered
+              50+ digital assets for social media campaigns using Adobe Creative Suite and Figma.</p>
             <div class="project-meta">
               <span>Tools: Adobe CC · Figma</span>
+            </div>
+            <div class="project-ctas">
+              <a href="https://github.com/milyas009" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">View on
+                GitHub ↗</a>
             </div>
           </div>
         </article>
 
         <article class="project-card" id="proj-pypsa">
           <div class="project-img-wrap">
-            <img src="assets/images/pypsa_map.png" alt="PyPSA-Earth Scientific Data Visualisation" class="project-img" />
+            <img src="assets/images/pypsa_map.png" alt="PyPSA-Earth Scientific Data Visualisation"
+              class="project-img" />
           </div>
           <div class="project-info">
             <div class="project-tags">
               <span class="tag">Data Viz</span><span class="tag">GreenTech</span><span class="tag">Geospatial</span>
             </div>
             <h3>PyPSA-Earth — Scientific Data Visualisation</h3>
-            <p>Active contributor to the global PyPSA-Earth project. Designed geospatial energy system maps, scenario comparison graphics, and stakeholder pitch decks that translate energy transition data for non-technical audiences — without greenwashing.</p>
+            <p>Active contributor to the global PyPSA-Earth project. Designed geospatial energy system maps, scenario
+              comparison graphics, and stakeholder pitch decks that translate energy transition data for non-technical
+              audiences — without greenwashing.</p>
             <div class="project-meta">
               <span>Tools: Python · QGIS · Figma · Matplotlib</span>
+            </div>
+            <div class="project-ctas">
+              <a href="https://github.com/pypsa-meets-earth/pypsa-earth" target="_blank" rel="noopener noreferrer"
+                class="btn btn-ghost btn-sm">View Project ↗</a>
             </div>
           </div>
         </article>
@@ -168,9 +255,15 @@
               <span class="tag">Pitch Deck</span><span class="tag">Presentation Design</span>
             </div>
             <h3>Investor Pitches &amp; Stakeholder Presentations</h3>
-            <p>Designed and delivered high-impact slide decks for research funding proposals, investor pitches, and international academic conferences. Best Presentation Award at the Solar PV Workshop co-organized with Arizona State University.</p>
+            <p>Designed and delivered high-impact slide decks for research funding proposals, investor pitches, and
+              international academic conferences. <strong>Best Presentation Award</strong> at the Solar PV Workshop
+              co-organized with Arizona State University.</p>
             <div class="project-meta">
               <span>Tools: Google Slides · Keynote · Figma</span>
+            </div>
+            <div class="project-ctas">
+              <a href="https://www.linkedin.com/in/milyas0009/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-ghost btn-sm">See on LinkedIn ↗</a>
             </div>
           </div>
         </article>
@@ -185,49 +278,69 @@
       <p class="section-label">Capabilities</p>
       <h2>Technical <span class="accent">Skills</span></h2>
       <div class="skills-grid">
-        <div class="skill-group">
-          <div class="skill-icon">🎨</div>
-          <h4>Design Tools</h4>
+        <div class="skill-group sg-design">
+          <div class="icon-box"><i data-lucide="palette"></i></div>
+          <h4>Visual Design</h4>
           <ul>
-            <li>Figma</li>
+            <li>Figma (UI/UX)</li>
             <li>Adobe Photoshop</li>
             <li>Adobe Illustrator</li>
-            <li>Google Slides</li>
-            <li>Keynote</li>
+            <li>Brand Identity</li>
+            <li>Keynote / Pitch Decks</li>
           </ul>
         </div>
-        <div class="skill-group">
-          <div class="skill-icon">🌐</div>
-          <h4>Web &amp; CMS</h4>
+        <div class="skill-group sg-web">
+          <div class="icon-box"><i data-lucide="layout"></i></div>
+          <h4>Web &amp; Digital</h4>
           <ul>
-            <li>HTML / CSS</li>
-            <li>WordPress</li>
-            <li>Notion (CMS)</li>
-            <li>Google Classroom</li>
-            <li>Responsive Design</li>
+            <li>HTML / CSS Integration</li>
+            <li>WordPress &amp; Notion CMS</li>
+            <li>Responsive Architecture</li>
+            <li>Social Media Assets</li>
+            <li>User Flow Design</li>
           </ul>
         </div>
-        <div class="skill-group">
-          <div class="skill-icon">📊</div>
-          <h4>Data Viz &amp; GIS</h4>
+        <div class="skill-group sg-data">
+          <div class="icon-box"><i data-lucide="bar-chart-3"></i></div>
+          <h4>Data &amp; GIS</h4>
           <ul>
-            <li>Python (Matplotlib, Plotly)</li>
             <li>Geospatial Visualisation</li>
-            <li>QGIS</li>
             <li>Scientific Figure Design</li>
-            <li>Web Mapping</li>
+            <li>QGIS / Mapping</li>
+            <li>Python (Matplotlib)</li>
+            <li>Complexity Translation</li>
           </ul>
         </div>
-        <div class="skill-group">
-          <div class="skill-icon">🤝</div>
+        <div class="skill-group sg-collab">
+          <div class="icon-box"><i data-lucide="users"></i></div>
           <h4>Collaboration</h4>
           <ul>
             <li>Remote-first Workflows</li>
             <li>Cross-timezone Teams</li>
             <li>Git / GitHub</li>
-            <li>Open-source Contribution</li>
+            <li>Open-source Stewardship</li>
             <li>TEFL Certified (2025)</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIAL ===== -->
+  <section id="testimonial">
+    <div class="container">
+      <div class="testimonial-wrap">
+        <div class="testimonial-quote-icon">"</div>
+        <blockquote class="testimonial-text">
+          Muhammad consistently delivers visuals that make complex energy data accessible and compelling — a rare skill
+          in the GreenTech space. His Best Presentation Award at the Arizona State University Solar PV Workshop speaks
+          for itself.
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="ta-info">
+            <strong>Dr. Naret Suyaroj</strong>
+            <span>PhD Supervisor, Chiang Mai University</span>
+          </div>
         </div>
       </div>
     </div>
@@ -238,32 +351,63 @@
     <div class="container">
       <p class="section-label">Research</p>
       <h2>Technical <span class="accent">Publications</span></h2>
-      <p class="section-sub">Peer-reviewed research with custom technical diagrams, system architecture figures, and data visualisations.</p>
+      <p class="section-sub">Peer-reviewed research with custom technical diagrams, system architecture figures, and
+        data visualisations.</p>
       <div class="pub-list">
-        <a class="pub-card" href="https://ieeexplore.ieee.org/document/8921038" target="_blank" rel="noopener">
+
+        <a class="pub-card" href="https://ieeexplore.ieee.org/document/8921038" target="_blank" rel="noopener noreferrer"
+          data-delay="0">
           <div class="pub-badge">IEEE</div>
           <div class="pub-content">
             <h4>Enhancing LVRT Capability of Small-Scale Hydro Power System using DFIG</h4>
-            <p>IEEE Xplore</p>
+            <p>IEEE Xplore · 2019</p>
           </div>
           <div class="pub-arrow">↗</div>
         </a>
-        <a class="pub-card" href="https://ieeexplore.ieee.org/document/8940727" target="_blank" rel="noopener">
+
+        <a class="pub-card" href="https://ieeexplore.ieee.org/document/8940727" target="_blank" rel="noopener noreferrer"
+          data-delay="1">
           <div class="pub-badge">IEEE</div>
           <div class="pub-content">
-            <h4>Techno-Economic Analysis of a Hybrid Power System</h4>
-            <p>IEEE Xplore</p>
+            <h4>Design of Optimum Configuration and Techno-Economic Analysis of a Hybrid Power System</h4>
+            <p>IEEE Xplore · 2019</p>
           </div>
           <div class="pub-arrow">↗</div>
         </a>
-        <a class="pub-card" href="https://www.ijew.io/paper/control-and-modelling-of-rotor-and-grid-side-converters-control-of-doubly-fed-induction-generator-for-the-application-in-micro-hydro" target="_blank" rel="noopener">
+
+        <a class="pub-card"
+          href="https://www.ijew.io/paper/control-and-modelling-of-rotor-and-grid-side-converters-control-of-doubly-fed-induction-generator-for-the-application-in-micro-hydro"
+          target="_blank" rel="noopener noreferrer" data-delay="2">
           <div class="pub-badge">IJEW</div>
           <div class="pub-content">
-            <h4>Control and Modelling of Rotor and Grid-Side Converters of DFIG</h4>
-            <p>International Journal of Electrical and Electronics Work</p>
+            <h4>Control and Modelling of Rotor and Grid-Side Converters of DFIG for Micro Hydro Applications</h4>
+            <p>International Journal of Engineering Works</p>
           </div>
           <div class="pub-arrow">↗</div>
         </a>
+
+        <a class="pub-card" href="https://www.ijew.io/paper/a-survey-report-on-multilevel-inverter-topologies"
+          target="_blank" rel="noopener noreferrer" data-delay="3">
+          <div class="pub-badge">IJEW</div>
+          <div class="pub-content">
+            <h4>A Survey Report on Multi-Level Inverter Topologies</h4>
+            <p>International Journal of Engineering Works</p>
+          </div>
+          <div class="pub-arrow">↗</div>
+        </a>
+
+        <a class="pub-card"
+          href="https://www.ijew.io/paper/optimization-of-off-grid-solar-gas-generator-hybrid-power-system-for-rural-area-of-district-karak-pakistan"
+          target="_blank" rel="noopener noreferrer" data-delay="4">
+          <div class="pub-badge">IJEW</div>
+          <div class="pub-content">
+            <h4>Optimization of Off-Grid Solar–Gas Generator Hybrid Power System for Rural Area of District Karak,
+              Pakistan</h4>
+            <p>International Journal of Engineering Works</p>
+          </div>
+          <div class="pub-arrow">↗</div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -285,18 +429,18 @@
               <span class="contact-icon">✆</span>
               (+66) 084-504-3106
             </a>
-            <a href="https://www.linkedin.com/in/milyas0009/" target="_blank" rel="noopener" class="contact-item">
+            <a href="https://www.linkedin.com/in/milyas0009/" target="_blank" rel="noopener noreferrer" class="contact-item">
               <span class="contact-icon">in</span>
               linkedin.com/in/milyas0009
             </a>
-            <a href="https://github.com/milyas009" target="_blank" rel="noopener" class="contact-item">
-              <span class="contact-icon">⌥</span>
+            <a href="https://github.com/milyas009" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-icon"><i data-lucide="github" style="width: 18px; height: 18px; stroke-width: 2.5;"></i></span>
               github.com/milyas009
             </a>
           </div>
         </div>
         <div class="contact-card">
-          <form class="contact-form" id="contactForm" onsubmit="return handleForm(event)">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xvzdbvqg" method="POST">
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="Jane Smith" required />
@@ -306,10 +450,22 @@
               <input type="email" id="email" name="email" placeholder="jane@company.com" required />
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+              <label for="subject">Enquiry Type</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a category…</option>
+                <option value="Freelance Project">Freelance Project</option>
+                <option value="Full-time Role">Full-time / Part-time Role</option>
+                <option value="Collaboration">Research Collaboration</option>
+                <option value="Data Visualisation">Data Visualisation</option>
+                <option value="Other">Other</option>
+              </select>
             </div>
-            <button type="submit" class="btn btn-primary full-width">Send Message</button>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width" id="submitBtn">Send Message</button>
             <p id="form-feedback" class="form-feedback"></p>
           </form>
         </div>
@@ -321,14 +477,20 @@
   <footer>
     <div class="container footer-inner">
       <p class="footer-logo">MI<span class="dot">.</span></p>
-      <p class="footer-copy">© 2025 Muhammad Ilyas · Digital Designer &amp; GreenTech Visual Strategist · Chiang Mai, Thailand</p>
+      <p class="footer-copy">© 2026 Muhammad Ilyas · Digital Designer &amp; GreenTech Visual Strategist · Chiang Mai,
+        Thailand</p>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/milyas0009/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/milyas009" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/milyas0009/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/milyas009" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
 </body>
+
 </html>
