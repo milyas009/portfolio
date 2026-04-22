@@ -970,6 +970,10 @@ footer {
   .hero-badges { justify-content: center; }
   .hero-image-col { order: -1; }
   .hero-profile-img { width: 240px; height: 280px; }
+  .hero-scroll-hint { display: none; }
+}
+@media (max-height: 920px) {
+  .hero-scroll-hint { display: none; }
 }
 @media (max-width: 900px) {
   .impact-grid { grid-template-columns: 1fr; }
