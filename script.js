@@ -8,6 +8,31 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
 
+/* ===== THEME TOGGLE ===== */
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.querySelector('.theme-toggle-icon');
+const THEME_KEY = 'portfolio-theme';
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeIcon) themeIcon.textContent = theme === 'dark' ? '☀' : '🌙';
+}
+
+(() => {
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+})();
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_KEY, nextTheme);
+  });
+}
+
 /* ===== HAMBURGER MENU ===== */
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');

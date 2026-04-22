@@ -25,6 +25,16 @@
   --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
 }
 
+[data-theme='dark'] {
+  --bg: #0b1220;
+  --bg-alt: #111b2e;
+  --surface: #0f172a;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border: #1f2a40;
+  --off-white: #111b2e;
+}
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -132,13 +142,39 @@ h3 { font-size: 1.25rem; }
   border-bottom: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
 }
+[data-theme='dark'] #navbar.scrolled {
+  background: rgba(11,18,32,0.9);
+}
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.65rem;
+  justify-self: end;
+}
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.theme-toggle:hover {
+  border-color: var(--emerald);
+  color: var(--emerald);
 }
 .nav-logo {
   font-family: var(--font-display);
@@ -151,6 +187,7 @@ h3 { font-size: 1.25rem; }
   display: flex;
   align-items: center;
   gap: 2.5rem;
+  justify-self: center;
 }
 .nav-links a {
   font-size: 0.9rem;
@@ -166,6 +203,10 @@ h3 { font-size: 1.25rem; }
   padding: 0.5rem 1.25rem;
   border-radius: 50px;
   font-size: 0.85rem !important;
+}
+.nav-cta-desktop {
+  display: inline-flex;
+  align-items: center;
 }
 .nav-cta:hover { background: var(--emerald-light) !important; color: #fff !important; }
 .hamburger {
@@ -445,9 +486,9 @@ h3 { font-size: 1.25rem; }
 section { padding: 9rem 0; position: relative; }
 #hero { background: var(--bg); }
 #impact {
-  background: #ffffff;
-  border-top: 1px solid #e6edf6;
-  border-bottom: 1px solid #e6edf6;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 #about { background: var(--bg-alt); }
 #projects { background: var(--bg); }
@@ -462,7 +503,7 @@ section { padding: 9rem 0; position: relative; }
   margin-top: 2rem;
 }
 .impact-card {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
@@ -590,7 +631,7 @@ section { padding: 9rem 0; position: relative; }
   gap: 1.5rem;
 }
 .project-card {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -697,7 +738,7 @@ section { padding: 9rem 0; position: relative; }
   gap: 1.5rem;
 }
 .skill-group {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-top: 3px solid var(--border);
   border-radius: var(--radius);
@@ -759,7 +800,7 @@ section { padding: 9rem 0; position: relative; }
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 1.25rem 1.5rem;
@@ -838,7 +879,7 @@ section { padding: 9rem 0; position: relative; }
   color: var(--emerald);
 }
 .contact-card {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 3rem;
@@ -862,7 +903,7 @@ section { padding: 9rem 0; position: relative; }
 }
 .form-group input,
 .form-group textarea {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 0.9rem 1.1rem;
@@ -878,7 +919,7 @@ section { padding: 9rem 0; position: relative; }
 .form-group textarea:focus {
   outline: none;
   border-color: var(--emerald);
-  background: white;
+  background: var(--surface);
   box-shadow: 0 0 0 4px rgba(16,185,129,0.08);
 }
 .form-feedback {
@@ -899,7 +940,7 @@ section { padding: 9rem 0; position: relative; }
   text-align: center;
   position: relative;
   padding: 3rem 4rem;
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -990,6 +1031,8 @@ footer {
   .testimonial-wrap { padding: 3rem 2rem; }
 }
 @media (max-width: 600px) {
+  .nav-actions { gap: 0.45rem; }
+  .nav-cta-desktop { display: none; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .nav-links.open {
@@ -1081,7 +1124,7 @@ footer {
 
 /* ===== FORM SELECT ===== */
 .form-group select {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 0.9rem 1.1rem;
