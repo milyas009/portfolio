@@ -878,6 +878,11 @@ section { padding: 9rem 0; position: relative; }
   flex-shrink: 0;
   color: var(--emerald);
 }
+.contact-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 2.2;
+}
 .contact-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1017,6 +1022,22 @@ footer {
 }
 @media (max-height: 920px) {
   .hero-scroll-hint { display: none; }
+}
+@media (max-height: 900px) {
+  #hero {
+    min-height: 100svh;
+    padding: 4.25rem 2rem 1.25rem;
+  }
+  .hero-layout { gap: 2rem; }
+  .hero-name { margin-bottom: 0.85rem; }
+  .hero-sub { margin-bottom: 1.15rem; }
+  .hero-target-role { margin-bottom: 0.95rem; }
+  .hero-actions { margin-bottom: 1.1rem; }
+  .hero-badges { gap: 0.55rem; }
+  .badge {
+    font-size: 0.68rem;
+    padding: 0.33rem 0.78rem;
+  }
 }
 @media (max-width: 900px) {
   .impact-grid { grid-template-columns: 1fr; }
